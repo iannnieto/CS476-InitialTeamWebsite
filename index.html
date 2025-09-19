@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Amazing Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #000000 0%, #5eede6 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #000000, #5eede6);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #000000 0%, #5eede6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .member-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .member-role {
+            font-size: 1.1rem;
+            color: #5eede6;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .member-bio {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .member-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #000000, #5eede6);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: #5eede6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #000000;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer h2 {
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .team-member {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Meet Our Team</h1>
+            <p>We're a passionate group of professionals dedicated to creating amazing experiences and delivering exceptional results.</p>
+        </header>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-photo" id="photo-ian">
+                    <span id="initials-ian">IN</span>
+                </div>
+                <h3 class="member-name">Ian Nieto</h3>
+                <p class="member-role">Team Lead</p>
+                <p class="member-bio">Computer Science Major with a minor in Cybersecurity, Profficient in C, Python, CSS, and JavaScript</p>
+                <div class="member-skills">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">CSS/JavaScript</span>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:imn32@nau.edu" class="contact-link">Email</a>
+                    <a href="https://www.linkedin.com/in/ian-nieto-2b8579325" class="contact-link">LinkedIn</a>
+                </div>
+                <div class="photo-upload-container">
+                    <input type="file" id="upload-ian" class="photo-upload-input" accept="image/*" onchange="handlePhotoUpload('ian', this)">
+                    <button class="photo-upload-btn" onclick="document.getElementById('upload-ian').click()">Upload Photo</button>
+                    <button class="photo-remove-btn" id="remove-ian" onclick="removePhoto('ian')" style="display: none;">Remove</button>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo" id="photo-jasmine">
+                    <span id="initials-jasmine">JF</span>
+                </div>
+                <h3 class="member-name">Jasmine Flowers</h3>
+                <p class="member-role">Member</p>
+                <p class="member-bio">Technical expert with deep expertise in software architecture and cloud technologies. Leads our engineering team with passion and precision.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Architecture</span>
+                    <span class="skill-tag">Cloud</span>
+                    <span class="skill-tag">DevOps</span>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:alice@company.com" class="contact-link">Email</a>
+                    <a href="https://linkedin.com/in/alicejohnson" class="contact-link">LinkedIn</a>
+                </div>
+                <div class="photo-upload-container">
+                    <input type="file" id="upload-jasmine" class="photo-upload-input" accept="image/*" onchange="handlePhotoUpload('jasmine', this)">
+                    <button class="photo-upload-btn" onclick="document.getElementById('upload-jasmine').click()">Upload Photo</button>
+                    <button class="photo-remove-btn" id="remove-jasmine" onclick="removePhoto('jasmine')" style="display: none;">Remove</button>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo" id="photo-john">
+                    <span id="initials-john">JG</span>
+                </div>
+                <h3 class="member-name">John Gornick</h3>
+                <p class="member-role">Member</p>
+                <p class="member-bio">Creative designer with an eye for detail and user experience. Transforms complex ideas into beautiful, intuitive interfaces.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">Branding</span>
+                    <span class="skill-tag">Prototyping</span>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:mike@company.com" class="contact-link">Email</a>
+                    <a href="https://linkedin.com/in/mikebrown" class="contact-link">LinkedIn</a>
+                </div>
+                <div class="photo-upload-container">
+                    <input type="file" id="upload-john" class="photo-upload-input" accept="image/*" onchange="handlePhotoUpload('john', this)">
+                    <button class="photo-upload-btn" onclick="document.getElementById('upload-john').click()">Upload Photo</button>
+                    <button class="photo-remove-btn" id="remove-john" onclick="removePhoto('john')" style="display: none;">Remove</button>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo" id="photo-jerry">
+                    <span id="initials-jerry">JK</span>
+                </div>
+                <h3 class="member-name">Jerry 'Tre' Kelley</h3>
+                <p class="member-role">Member</p>
+                <p class="member-bio">Marketing strategist with a talent for storytelling and brand building. Drives growth through creative campaigns and data-driven insights.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Strategy</span>
+                    <span class="skill-tag">Content</span>
+                    <span class="skill-tag">Analytics</span>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:sarah@company.com" class="contact-link">Email</a>
+                    <a href="https://linkedin.com/in/sarahdavis" class="contact-link">LinkedIn</a>
+                </div>
+                <div class="photo-upload-container">
+                    <input type="file" id="upload-jerry" class="photo-upload-input" accept="image/*" onchange="handlePhotoUpload('jerry', this)">
+                    <button class="photo-upload-btn" onclick="document.getElementById('upload-jerry').click()">Upload Photo</button>
+                    <button class="photo-remove-btn" id="remove-jerry" onclick="removePhoto('jerry')" style="display: none;">Remove</button>
+                </div>
+            </div>
+
+        <footer class="footer">
+            <h2>Ready to Work With Us?</h2>
+            <p>We're always looking for talented individuals to join our growing team. Get in touch to learn about opportunities!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Load saved photos from localStorage on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSavedPhotos();
+        });
+
+        function handlePhotoUpload(memberId, input) {
+            const file = input.files[0];
+            if (file) {
+                // Validate file type
+                if (!file.type.startsWith('image/')) {
+                    alert('Please select a valid image file.');
+                    return;
+                }
+
+                // Validate file size (max 5MB)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('Image size must be less than 5MB.');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    displayPhoto(memberId, e.target.result);
+                    savePhoto(memberId, e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function displayPhoto(memberId, imageData) {
+            const photoContainer = document.getElementById(`photo-${memberId}`);
+            const initials = document.getElementById(`initials-${memberId}`);
+            const removeBtn = document.getElementById(`remove-${memberId}`);
+
+            // Clear existing content
+            photoContainer.innerHTML = '';
+
+            // Create and display image
+            const img = document.createElement('img');
+            img.src = imageData;
+            img.alt = `Photo of ${memberId}`;
+            photoContainer.appendChild(img);
+
+            // Show remove button
+            removeBtn.style.display = 'inline-block';
+        }
+
+        function removePhoto(memberId) {
+            const photoContainer = document.getElementById(`photo-${memberId}`);
+            const initials = document.getElementById(`initials-${memberId}`);
+            const removeBtn = document.getElementById(`remove-${memberId}`);
+            const uploadInput = document.getElementById(`upload-${memberId}`);
+
+            // Reset to initials
+            photoContainer.innerHTML = '';
+            const initialsSpan = document.createElement('span');
+            initialsSpan.id = `initials-${memberId}`;
+            initialsSpan.textContent = getInitials(memberId);
+            photoContainer.appendChild(initialsSpan);
+
+            // Hide remove button and reset input
+            removeBtn.style.display = 'none';
+            uploadInput.value = '';
+
+            // Remove from localStorage
+            localStorage.removeItem(`photo_${memberId}`);
+        }
+
+        function getInitials(memberId) {
+            const initialsMap = {
+                'ian': 'IN',
+                'jasmine': 'JF',
+                'john': 'JG',
+                'jerry': 'JK'
+            };
+            return initialsMap[memberId] || '??';
+        }
+
+        function savePhoto(memberId, imageData) {
+            localStorage.setItem(`photo_${memberId}`, imageData);
+        }
+
+        function loadSavedPhotos() {
+            const members = ['ian', 'jasmine', 'john', 'jerry'];
+            members.forEach(memberId => {
+                const savedPhoto = localStorage.getItem(`photo_${memberId}`);
+                if (savedPhoto) {
+                    displayPhoto(memberId, savedPhoto);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
