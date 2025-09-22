@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Amazing Team</title>
+    <title>Altored Health - CS476 Capstone Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -183,6 +183,56 @@
             display: none;
         }
 
+        .team-logo-container {
+            margin-bottom: 30px;
+        }
+
+        .under-construction {
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .under-construction h2 {
+            color: #ffeb3b;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .under-construction p {
+            color: white;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .team-logo {
+            width: 300px;
+            height: 100px;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
         .footer {
             text-align: center;
             color: white;
@@ -251,8 +301,17 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>Meet Our Team</h1>
-            <p>We're a passionate group of professionals dedicated to creating amazing experiences and delivering exceptional results.</p>
+            <div class="team-logo-container">
+                <div class="team-logo">
+                    <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health Team Logo">
+                </div>
+            </div>
+            <h1>Welcome to Our Capstone Project</h1>
+            <div class="under-construction">
+                <h2>🚧 Website Under Construction 🚧</h2>
+                <p>Our project website will appear here soon. Stay tuned for updates!</p>
+            </div>
+            <h2>Meet Our Team</h2>
         </header>
 
         <div class="team-grid">
@@ -270,7 +329,7 @@
                     <span class="skill-tag">CSS/JavaScript</span>
                 </div>
                 <div class="contact-info">
-                    <a href="mailto:imn32@nau.edu" class="contact-link">Email</a>
+                    <span class="contact-link">imn32@nau.edu</span>
                     <a href="https://www.linkedin.com/in/ian-nieto-2b8579325" class="contact-link">LinkedIn</a>
                 </div>
             </div>
@@ -282,20 +341,15 @@
                 </div>
                 <h3 class="member-name">Jasmine Flowers</h3>
                 <p class="member-role">Member</p>
-                <p class="member-bio">Technical expert with deep expertise in software architecture and cloud technologies. Leads our engineering team with passion and precision.</p>
+                <p class="member-bio">Applied Computer Science major with technical expertise in software architecture and cloud technologies.</p>
                 <div class="member-skills">
                     <span class="skill-tag">Architecture</span>
                     <span class="skill-tag">Cloud</span>
                     <span class="skill-tag">DevOps</span>
                 </div>
                 <div class="contact-info">
-                    <a href="mailto:jdj287@asu.edu" class="contact-link">Email</a>
+                    <span class="contact-link">jjf287@nau.edu</span>
                     <a href="https://www.linkedin.com/in/jasmine-flowers-267823230/" class="contact-link">LinkedIn</a>
-                </div>
-                <div class="photo-upload-container">
-                    <input type="file" id="upload-jasmine" class="photo-upload-input" accept="image/*" onchange="handlePhotoUpload('jasmine', this)">
-                    <button class="photo-upload-btn" onclick="document.getElementById('upload-jasmine').click()">Upload Photo</button>
-                    <button class="photo-remove-btn" id="remove-jasmine" onclick="removePhoto('jasmine')" style="display: none;">Remove</button>
                 </div>
             </div>
 
@@ -313,7 +367,7 @@
                     <span class="skill-tag">Client knowledge and outreach</span>
                 </div>
                 <div class="contact-info">
-                    <a href="mailto:jbg264@nau.edu" class="contact-link">Email</a>
+                    <span class="contact-link">jbg264@nau.edu</span>
                     <a href="https://www.linkedin.com/in/john-gornick-47865b352/" class="contact-link">LinkedIn</a>
                 </div>
             </div>
@@ -332,27 +386,43 @@
                     <span class="skill-tag">Computer Systems</span>
                 </div>
                 <div class="contact-info">
-                    <a href="tre@westrt.com" class="contact-link">Email</a>
+                    <span class="contact-link">tre@westrt.com</span>
                     <a href="https://www.linkedin.com/in/jerry-kelley-673174142/" class="contact-link">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo" id="photo-bailey">
+                    <span id="initials-bailey">BH</span>
+                    <img id="img-bailey" src="" alt="Bailey's Photo">
+                </div>
+                <h3 class="member-name">Bailey Hall</h3>
+                <p class="member-role">Mentor</p>
+                <p class="member-bio">Contact mentor providing guidance and support to the team.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Mentoring</span>
+                    <span class="skill-tag">Guidance</span>
+                    <span class="skill-tag">Support</span>
+                </div>
+                <div class="contact-info">
+                    <span class="contact-link">bjh437@nau.edu</span>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo" id="photo-jesslynn">
+                    <span id="initials-jesslynn">JA</span>
+                    <img id="img-jesslynn" src="" alt="Jesslynn's Photo">
+                </div>
+                <h3 class="member-name">Jesslynn Armstrong</h3>
+                <p class="member-role">Client</p>
+                <div class="contact-info">
+                    <span class="contact-link">jesslynn.armstrong@nau.edu</span>
                 </div>
             </div>
         </div>
 
-        <div class="instructions">
-            <h3>How to Add Your Photo</h3>
-            <ol>
-                <li>Click the "Upload Photo" button under Jasmine's profile</li>
-                <li>Navigate to your Downloads folder (c:\Users\theja\Downloads\)</li>
-                <li>Select the image file (IMG_0067.jpg)</li>
-                <li>The photo will be saved in your browser and displayed on future visits</li>
-            </ol>
-            <p><strong>Note:</strong> The photo is stored in your browser's local storage. It will persist until you clear your browser data or remove the photo.</p>
-        </div>
 
-        <footer class="footer">
-            <h2>Ready to Work With Us?</h2>
-            <p>We're always looking for talented individuals to join our growing team. Get in touch to learn about opportunities!</p>
-        </footer>
     </div>
 
     <script>
@@ -425,7 +495,7 @@
         }
 
         function loadSavedPhotos() {
-            const members = ['ian', 'jasmine', 'john', 'jerry'];
+            const members = ['ian', 'jasmine', 'john', 'jerry', 'bailey', 'jesslynn'];
             members.forEach(memberId => {
                 const savedPhoto = localStorage.getItem(`photo_${memberId}`);
                 if (savedPhoto) {
@@ -433,6 +503,7 @@
                 }
             });
         }
+
     </script>
 </body>
 </html>
