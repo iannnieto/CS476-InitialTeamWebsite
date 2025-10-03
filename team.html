@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About the Team · Altored Health</title>
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="container">
+    <header class="header">
+      <div class="top-banner">
+        <a class="brand" href="index.html" aria-label="Altored Health Home">
+          <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health Logo" />
+          <strong>Altored Health</strong>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="team.html" class="nav-link active">About the Team</a></li>
+            <li><a href="project.html" class="nav-link">About the Project</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1>About the Team</h1>
+    </header>
+
+    <main id="main">
+      <section class="card">
+        <h1>Who We Are</h1>
+        <p>We’re a cross-functional team focused on delivering a maintainable, user-centered solution with clear milestones, quality gates, and sponsor feedback loops.</p>
+
+        <div class="team">
+          <!-- Member 1 -->
+          <article class="member">
+            <img src="assets/img/placeholder.gif" alt="Ian Nieto headshot" width="96" height="96" />
+            <div>
+              <h2>Ian Nieto</h2>
+              <p class="role">Team Lead</p>
+              <p>CS major (Cybersecurity minor). Proficient in C, Python, CSS, and JavaScript.</p>
+              <div class="contact">
+                <a href="mailto:imn32@nau.edu">imn32@nau.edu</a>
+                <a href="https://www.linkedin.com/in/ian-nieto-2b8579325" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 2 -->
+          <article class="member">
+            <img src="assets/img/placeholder.gif" alt="Jasmine Flowers headshot" width="96" height="96" />
+            <div>
+              <h2>Jasmine Flowers</h2>
+              <p class="role">Member</p>
+              <p>Applied CS major with strengths in software architecture and cloud technologies.</p>
+              <div class="contact">
+                <a href="mailto:jjf287@nau.edu">jjf287@nau.edu</a>
+                <a href="https://www.linkedin.com/in/jasmine-flowers-267823230/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 3 -->
+          <article class="member">
+            <img src="assets/img/placeholder.gif" alt="John Gornick headshot" width="96" height="96" />
+            <div>
+              <h2>John Gornick</h2>
+              <p class="role">Member</p>
+              <p>CS major with database experience and a strong focus on end-user outcomes.</p>
+              <div class="contact">
+                <a href="mailto:jbg264@nau.edu">jbg264@nau.edu</a>
+                <a href="https://www.linkedin.com/in/john-gornick-47865b352/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 4 -->
+          <article class="member">
+            <img src="assets/img/placeholder.gif" alt="Jerry 'Tre' Kelley headshot" width="96" height="96" />
+            <div>
+              <h2>Jerry “Tre” Kelley</h2>
+              <p class="role">Member</p>
+              <p>Generalist engineer with experience in C, C++, C#, and Java.</p>
+              <div class="contact">
+                <a href="mailto:tre@westrt.com">tre@westrt.com</a>
+                <a href="https://www.linkedin.com/in/jerry-kelley-673174142/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mentor -->
+          <article class="member">
+            <img src="assets/img/placeholder.gif" alt="Bailey Hall headshot" width="96" height="96" />
+            <div>
+              <h2>Bailey Hall</h2>
+              <p class="role">Mentor</p>
+              <p>Provides guidance on scope, delivery quality, and stakeholder communication.</p>
+              <div class="contact">
+                <a href="mailto:bjh437@nau.edu">bjh437@nau.edu</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Client -->
+          <article class="member">
+            <img src="assets/img/placeholder.gif" alt="Jesslynn Armstrong headshot" width="96" height="96" />
+            <div>
+              <h2>Jesslynn Armstrong</h2>
+              <p class="role">Client</p>
+              <p>Project sponsor and primary stakeholder.</p>
+              <div class="contact">
+                <a href="mailto:jesslynn.armstrong@nau.edu">jesslynn.armstrong@nau.edu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> Altored Health — CS476 Capstone</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About the Project · Altored Health</title>
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="container">
+    <header class="header">
+      <div class="top-banner">
+        <a class="brand" href="index.html" aria-label="Altored Health Home">
+          <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health Logo" />
+          <strong>Altored Health</strong>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="team.html" class="nav-link">About the Team</a></li>
+            <li><a href="project.html" class="nav-link active">About the Project</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1>About the Project</h1>
+    </header>
+
+    <main id="main">
+      <!-- Overview card -->
+      <section class="card">
+        <h1>Project Overview</h1>
+        <p>Altored Health aims to unify fragmented health data into a single, actionable view for proactive care. Below is the evolving outline of scope, objectives, and timeline.</p>
+
+        <div class="project-content">
+          <h2>Scope</h2>
+          <p>Integrate key data sources (appointments, labs, wearables) into a cohesive view; deliver clear, human-readable insights; ensure privacy and security from day one.</p>
+
+          <h3>Objectives</h3>
+          <div class="project-placeholder">
+            <h4>V1 Objectives</h4>
+            <p>• Unified data model & ingestion pipeline<br/>• Insight cards with status/severity<br/>• Basic account & audit logging</p>
+
+            <h4>Stretch Goals</h4>
+            <p>• Provider-facing dashboard<br/>• Smart notifications for early signals<br/>• Export/share flows</p>
+
+            <h4>Non-Goals (for now)</h4>
+            <p>• Full EHR integration<br/>• Insurance billing</p>
+          </div>
+
+          <h2>Milestones</h2>
+          <div class="project-placeholder">
+            <h4>M1 — Discovery & Architecture</h4>
+            <p>Personas, data contracts, high-level diagrams.</p>
+
+            <h4>M2 — Data Ingestion & Model</h4>
+            <p>Parsers, validation, normalization, persistence.</p>
+
+            <h4>M3 — Insights & UX</h4>
+            <p>Insight rules, card components, accessibility passes.</p>
+
+            <h4>M4 — Polishing & Handover</h4>
+            <p>Telemetry, documentation, deployment guide.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> Altored Health — CS476 Capstone</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
