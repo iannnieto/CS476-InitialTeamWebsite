@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technologies — Altored Health</title>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container top-banner">
+      <a class="brand" href="index.html" aria-label="Altored Health Home">
+        <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health logo" />
+        <span class="brand-name">Altored Health</span>
+      </a>
+
+      <!-- Accessible hamburger (pure CSS, no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="team.html" class="nav-link">About the Team</a></li>
+          <li><a href="project.html" class="nav-link">About the Project</a></li>
+          <li><a href="requirements.html" class="nav-link">High Level Requirements</a></li>
+          <li><a href="solution.html" class="nav-link">Envisioned Solution</a></li>
+          <li><a href="technologies.html" class="nav-link active">Technologies</a></li>
+          <li><a href="schedule.html" class="nav-link">Schedule/Resources</a></li>
+          <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Technologies</h1>
+        <p>
+          The tools and platforms powering our healthcare transparency platform.
+        </p>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+  </header>
+
+  <main id="main">
+    <!-- Tech Stack Overview -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Our Technology Stack</h2>
+          <p>
+            We built Altored Health on a modern, cloud-native stack designed for scalability, security, and rapid development. Each technology was chosen for its reliability and ability to meet healthcare compliance standards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Technologies -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Core Technologies</h2>
+
+          <h3>Microsoft Azure</h3>
+          <p>
+            Our primary cloud platform, providing App Services for hosting, Blob Storage for data management, and built-in HIPAA compliance capabilities. Azure's integrated ecosystem allows us to manage infrastructure, databases, and deployment pipelines all in one place.
+          </p>
+
+          <h3>PostgreSQL</h3>
+          <p>
+            A robust, open-source relational database that stores our healthcare pricing data, user information, and application state. PostgreSQL's reliability and advanced query capabilities make it ideal for handling complex healthcare data relationships.
+          </p>
+
+          <h3>Prisma</h3>
+          <p>
+            Our database toolkit and ORM that simplifies database access with type-safe queries and automatic migrations. Prisma sits between our application code and PostgreSQL, making database operations faster to write and safer to execute.
+          </p>
+
+          <h3>React</h3>
+          <p>
+            The frontend framework powering our user interface, enabling a fast, responsive experience with component-based architecture. React's virtual DOM and ecosystem of tools let us build complex interfaces that remain performant even with large datasets.
+          </p>
+
+          <h3>Node.js</h3>
+          <p>
+            Our JavaScript runtime for backend services, handling API requests, data processing, and integration with Azure services. Node.js enables us to use JavaScript across the full stack, streamlining development and code sharing.
+          </p>
+
+          <h3>Python</h3>
+          <p>
+            Used for data parsing, transformation scripts, and backend processing tasks where Python's extensive libraries excel. Python handles our data pipeline work, converting raw healthcare data into structured formats ready for the database.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why These Technologies -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Why These Choices</h2>
+          <p>
+            This stack balances modern development practices with healthcare industry requirements. Azure provides the compliance framework we need. PostgreSQL offers the data integrity healthcare applications demand. React delivers the user experience patients expect. Prisma and Node.js accelerate development without sacrificing quality. Python bridges the gap between raw data sources and our structured database. Together, these technologies let us move fast while building something secure and reliable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Altored Health — CS476 Capstone</p>
+      <ul class="footer-links">
+        <li><a href="team.html">Team</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // tiny enhancement: current year, no frameworks
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

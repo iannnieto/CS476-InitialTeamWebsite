@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Envisioned Solution — Altored Health</title>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container top-banner">
+      <a class="brand" href="index.html" aria-label="Altored Health Home">
+        <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health logo" />
+        <span class="brand-name">Altored Health</span>
+      </a>
+
+      <!-- Accessible hamburger (pure CSS, no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="team.html" class="nav-link">About the Team</a></li>
+          <li><a href="project.html" class="nav-link">About the Project</a></li>
+          <li><a href="requirements.html" class="nav-link">High Level Requirements</a></li>
+          <li><a href="solution.html" class="nav-link active">Envisioned Solution</a></li>
+          <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li><a href="schedule.html" class="nav-link">Schedule/Resources</a></li>
+          <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Envisioned Solution</h1>
+        <p>
+          How we're bringing transparency to healthcare pricing, one data point at a time.
+        </p>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+  </header>
+
+  <main id="main">
+    <!-- The Vision -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>A Centralized Platform for Healthcare Transparency</h2>
+          <p>
+            We're building a centralized web application that gives patients the power to make informed decisions through accurate, upfront cost information. By aggregating and standardizing data mandated by section 2718(e) of the Public Health Service Act, we're turning fragmented healthcare pricing into something accessible and actionable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Solve the Problem -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Tackling Healthcare's Biggest Pain Points</h2>
+          <p>
+            Our platform directly addresses the core issues that make healthcare costs so opaque. It eliminates information blackouts with comprehensive procedure pricing across providers. Integration of insurance copays prevents misleading estimates by showing real out-of-pocket costs. Future bill analysis tools combat surprise billing by flagging unexpected charges. User-submitted experiences build community knowledge that creates a shared resource benefiting everyone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>The Engine Behind the Platform</h2>
+          <p>
+            Our system combines proprietary healthcare databases, public datasets, and user submissions into a unified knowledge base. Parsing engines scrape and standardize disparate data sources into a common format. Computational normalization reconciles differences across billing systems and formats. Community validation cross-references official data with real patient experiences.
+          </p>
+
+          <h3>Personalized Insights</h3>
+          <p>
+            Once processed, this data powers personalized cost estimates and community-driven provider evaluations. These create a knowledge resource that grows stronger with every user interaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Not Simpler Alternatives? -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Why Automation Over Manual Entry</h2>
+          <p>
+            We considered simpler alternatives like linking directly to hospital files or relying on manual data entry, but both suffer from fragmentation and scalability issues. Manual processes can't keep pace with the volume and variety of healthcare data, and direct links leave users navigating dozens of disconnected systems.
+          </p>
+          <p>
+            Our automated aggregation combined with community validation is both scalable and accurate, delivering a superior user experience without the ongoing burden of manual data management.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Changing How Consumers Engage with Healthcare</h2>
+          <p>
+            This isn't just about pricing transparency. It's about shifting market dynamics. When patients can compare costs and make value-based decisions, it places downward pressure on prices while reducing medical debt through informed choices.
+          </p>
+          <p>
+            We're fundamentally changing the relationship between patients and providers, one transparent data point at a time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Altored Health — CS476 Capstone</p>
+      <ul class="footer-links">
+        <li><a href="team.html">Team</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // tiny enhancement: current year, no frameworks
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

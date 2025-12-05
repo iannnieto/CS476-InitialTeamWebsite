@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>High Level Requirements — Altored Health</title>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container top-banner">
+      <a class="brand" href="index.html" aria-label="Altored Health Home">
+        <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health logo" />
+        <span class="brand-name">Altored Health</span>
+      </a>
+
+      <!-- Accessible hamburger (pure CSS, no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="team.html" class="nav-link">About the Team</a></li>
+          <li><a href="project.html" class="nav-link">About the Project</a></li>
+          <li><a href="requirements.html" class="nav-link active">High Level Requirements</a></li>
+          <li><a href="solution.html" class="nav-link">Envisioned Solution</a></li>
+          <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li><a href="schedule.html" class="nav-link">Schedule/Resources</a></li>
+          <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Header (instead of hero) -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>High Level Requirements</h1>
+        <p>
+          The technical foundation for making healthcare data searchable, accessible, and secure.
+        </p>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+  </header>
+
+  <main id="main">
+    <!-- Domain Requirements -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Domain-Level Requirements</h2>
+          <p>
+            Our software transforms fragmented healthcare data into something searchable, accessible, and actionable. At the foundation, we're building three core capabilities: searchable healthcare data for pricing, providers, and procedures; accessible healthcare data with clear, transparent pricing once you've found what you need; and user-friendly authentication with secure login and signup to personalize your experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Functional Requirements -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Functional-Level Requirements</h2>
+          <p>
+            Here's how we deliver on those domain goals, from must-haves to should-haves that push the system even further.
+          </p>
+
+          <h3>Must-Haves</h3>
+          <p>
+            A central search interface moves users from query to results instantly, powered by Azure containers that categorize procedures by location and type. Choose a procedure and see everything: pricing, provider details, and relevant information displayed cleanly. Login and signup pages are protected by Azure tokens and end-to-end HTTPS encryption.
+          </p>
+
+          <h3>Should-Haves</h3>
+          <p>
+            Upload medical bills or EOBs and let our system process them into structured data, flagging potential overcharges. Refine results by geography for location-specific pricing and availability. Note that document scanning is resource-intensive and may require dedicated GPU processing for AI-driven analysis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance Requirements -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Performance Requirements</h2>
+          <p>
+            Speed and responsiveness aren't optional. They're essential to keeping users engaged. Search delivers results in under 5 seconds, achieved by sorting data into Azure containers by procedure type and location. Our decompiler runs on a schedule to minimize CPU load, processing data updates only when necessary. The React-powered frontend stays snappy, with clear feedback when backend processes or connections slow down.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Environmental Requirements -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Environmental Requirements</h2>
+          <p>
+            Built entirely on Microsoft Azure, our infrastructure is secure, scalable, and compliant from the ground up.
+          </p>
+
+          <h3>Platform and Hosting</h3>
+          <p>
+            Azure App Services with PostgreSQL and Blob Storage for data management. Accessible via standard browsers with no special hardware required.
+          </p>
+
+          <h3>Development Stack</h3>
+          <p>
+            Backend uses Python (FastAPI) and Node.js. Frontend uses React. Version control and CI/CD through GitHub with automated pipelines.
+          </p>
+
+          <h3>Security and Compliance</h3>
+          <p>
+            HIPAA and HITECH compliant to protect healthcare data. Azure Active Directory for authentication with token-based role access. TLS 1.2+ for data in transit, AES-256 for data at rest.
+          </p>
+
+          <h3>Testing and Deployment</h3>
+          <p>
+            Dedicated staging environment separate from production. Continuous integration with unit and functional testing before merge. Production deployment via GitHub Actions for seamless releases.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Development Process</h2>
+          <p>
+            Our development approach prioritized flexibility and momentum, adapting week-to-week based on progress and priorities rather than rigid sprints.
+          </p>
+
+          <h3>Workflow and Collaboration</h3>
+          <p>
+            The team evaluated current progress and assigned tasks dynamically on a weekly basis, allowing us to pivot quickly as challenges emerged. Primarily remote work supplemented by weekly meetings to sync up, troubleshoot blockers, and align on next steps. Discord served as our primary collaboration hub for quick questions, updates, and coordination.
+          </p>
+
+          <h3>Version Control Strategy</h3>
+          <p>
+            Separate branches for major components like cloud and frontend allowed parallel development without conflicts. All code versioned and tracked through GitHub, with pull requests for merging feature work.
+          </p>
+
+          <h3>Deployment Approach</h3>
+          <p>
+            Primary deployment through Bicep templates for consistent, repeatable Azure infrastructure provisioning. For rapid iterations or troubleshooting, manual deployments kept development moving forward.
+          </p>
+
+          <p>
+            This adaptive process let us stay responsive to technical challenges while maintaining steady progress toward our goals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Altored Health — CS476 Capstone</p>
+      <ul class="footer-links">
+        <li><a href="team.html">Team</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // tiny enhancement: current year, no frameworks
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
