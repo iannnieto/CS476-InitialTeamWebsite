@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Envisioned Solution — Altored Health</title>
+  <title>The Product — Altored Health</title>
 
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
@@ -21,7 +21,6 @@
         <span class="brand-name">Altored Health</span>
       </a>
 
-      <!-- Accessible hamburger (pure CSS, no JS) -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
       <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
         <span></span><span></span><span></span>
@@ -41,12 +40,11 @@
       </nav>
     </div>
 
-    <!-- Page Header -->
     <section class="hero">
       <div class="container hero-inner">
-        <h1>Envisioned Solution</h1>
+        <h1>The Product</h1>
         <p>
-          How we're bringing transparency to healthcare pricing, one data point at a time.
+          A searchable, transparent healthcare pricing platform built to help patients make informed decisions before they ever set foot in a provider's office.
         </p>
       </div>
       <div class="hero-glow" aria-hidden="true"></div>
@@ -54,73 +52,91 @@
   </header>
 
   <main id="main">
-    <!-- The Vision -->
+
+    <!-- Value Proposition -->
     <section class="section">
       <div class="container">
         <div class="problem-card">
-          <h2>A Centralized Platform for Healthcare Transparency</h2>
+          <h2>Value Proposition</h2>
           <p>
-            We're building a centralized web application that gives patients the power to make informed decisions through accurate, upfront cost information. By aggregating and standardizing data mandated by section 2718(e) of the Public Health Service Act, we're turning fragmented healthcare pricing into something accessible and actionable.
+            Healthcare pricing is unpredictable by design. Patients routinely receive surprise bills for procedures they thought were covered, and there is no easy way to compare costs across providers before making a care decision. Altored Health changes that by aggregating standardized hospital pricing data into a single, searchable platform. Users can look up any procedure, compare prices across providers, and see what they will actually pay, whether through insurance or out of pocket, before committing to care.
+          </p>
+          <p>
+            The result is a platform that reduces financial anxiety, prevents surprise billing, and puts patients in control of their healthcare decisions for the first time.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- How We Solve the Problem -->
+    <!-- Demo Video -->
     <section class="section">
       <div class="container">
         <div class="problem-card">
-          <h2>Tackling Healthcare's Biggest Pain Points</h2>
+          <h2>Product Demo</h2>
           <p>
-            Our platform directly addresses the core issues that make healthcare costs so opaque. It eliminates information blackouts with comprehensive procedure pricing across providers. Integration of insurance copays prevents misleading estimates by showing real out-of-pocket costs. Future bill analysis tools combat surprise billing by flagging unexpected charges. User-submitted experiences build community knowledge that creates a shared resource benefiting everyone.
+            Watch the platform in action. This demo walks through the core search experience, pricing comparison, and key features built into the current release.
+          </p>
+          <div style="margin: 2rem 0;">
+            <video width="100%" controls style="max-width: 800px; display: block; margin: 0 auto; border-radius: 8px;">
+              <source src="marketproduct.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>System Architecture</h2>
+          <p>
+            Altored Health is built on a cloud-native architecture hosted entirely on Microsoft Azure. The diagram below shows how the major components connect, from raw data ingestion through to the user-facing interface.
+          </p>
+          <div style="margin: 2rem 0; text-align: center;">
+            <img src="softwarearchitecture.png" alt="Altored Health system architecture diagram" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--line);" />
+          </div>
+          <p>
+            The system is organized into four layers. The data ingestion layer consists of Python scripts that pull source data from hospital price files, parse and load it into a PostgreSQL database, and send CPT and pricing queries to the API. The AI services layer sits within the backend alongside the API: Google Generative AI generates semantic embeddings to normalize procedure terms across inconsistent naming conventions, while Groq handles clarifying questions and returns results directly to the frontend. The API ties these together, passing normalized terms between services and serving REST endpoints for search and pricing to the frontend. The frontend is a Next.js application deployed on Azure Static Web Apps, with client-side routing and Easy Auth via Entra ID handling OAuth login and role-based access control.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- How It Works -->
+    <!-- Key Use Cases -->
     <section class="section">
       <div class="container">
         <div class="problem-card">
-          <h2>The Engine Behind the Platform</h2>
+          <h2>Key Use Cases</h2>
+
+          <h3>Searching for a Procedure</h3>
           <p>
-            Our system combines proprietary healthcare databases, public datasets, and user submissions into a unified knowledge base. Parsing engines scrape and standardize disparate data sources into a common format. Computational normalization reconciles differences across billing systems and formats. Community validation cross-references official data with real patient experiences.
+            A patient needs a knee MRI and wants to know what it will cost before scheduling. They open Altored Health and type in the procedure name. The search bar accepts natural language input and the platform surfaces relevant results instantly.
+          </p>
+          <div style="margin: 1.5rem 0; text-align: center;">
+            <img src="search.png" alt="Altored Health search interface" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--line);" />
+          </div>
+          <p>
+            Results come back as a clean list of providers with real pricing pulled from standardized hospital data. The patient can sort by price, filter by location, and identify the best option without making a single phone call.
+          </p>
+          <div style="margin: 1.5rem 0; text-align: center;">
+            <img src="results.png" alt="Altored Health search results" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--line);" />
+          </div>
+
+          <h3>Comparing Self-Pay vs. Insurance</h3>
+          <p>
+            A user with a high-deductible plan wants to know whether it is worth filing a claim for an upcoming procedure or just paying out of pocket. Selecting a provider pulls up a detailed breakdown of coverage options, with self-pay and insurance rates displayed side by side so the answer is clear before the appointment is ever booked.
+          </p>
+          <div style="margin: 1.5rem 0; text-align: center;">
+            <img src="information.png" alt="Altored Health insurance information view" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--line);" />
+          </div>
+
+          <h3>Getting a Recommended Plan</h3>
+          <p>
+            After searching for several procedures across multiple sessions, a user sees a recommended insurance plan surfaced on their dashboard. The recommendation is generated by the Groq-powered engine based on their actual search history, suggesting a plan that would cover their most common searches at a lower out-of-pocket cost than their current coverage.
           </p>
 
-          <h3>Personalized Insights</h3>
-          <p>
-            Once processed, this data powers personalized cost estimates and community-driven provider evaluations. These create a knowledge resource that grows stronger with every user interaction.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Not Simpler Alternatives? -->
-    <section class="section">
-      <div class="container">
-        <div class="problem-card">
-          <h2>Why Automation Over Manual Entry</h2>
-          <p>
-            We considered simpler alternatives like linking directly to hospital files or relying on manual data entry, but both suffer from fragmentation and scalability issues. Manual processes can't keep pace with the volume and variety of healthcare data, and direct links leave users navigating dozens of disconnected systems.
-          </p>
-          <p>
-            Our automated aggregation combined with community validation is both scalable and accurate, delivering a superior user experience without the ongoing burden of manual data management.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact -->
-    <section class="section">
-      <div class="container">
-        <div class="problem-card">
-          <h2>Changing How Consumers Engage with Healthcare</h2>
-          <p>
-            When patients can compare costs and make value-based decisions, it places downward pressure on prices while reducing medical debt through informed choices.
-          </p>
-          <p>
-            We're fundamentally changing the relationship between patients and providers, one transparent data point at a time.
-          </p>
         </div>
       </div>
     </section>
@@ -143,7 +159,6 @@
   </footer>
 
   <script>
-    // tiny enhancement: current year, no frameworks
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

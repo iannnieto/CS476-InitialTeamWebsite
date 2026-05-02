@@ -3,80 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About the Project · Altored Health</title>
+  <title>About the Project — Altored Health</title>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="container">
-    <header class="header">
-      <div class="top-banner">
-        <a class="brand" href="index.html" aria-label="Altored Health Home">
-          <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health Logo" />
-          <strong>Altored Health</strong>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="team.html" class="nav-link">About the Team</a></li>
-            <li><a href="project.html" class="nav-link active">About the Project</a></li>
-          </ul>
-        </nav>
+  <header class="site-header">
+    <div class="container top-banner">
+      <a class="brand" href="index.html" aria-label="Altored Health Home">
+        <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health logo" />
+        <span class="brand-name">Altored Health</span>
+      </a>
+
+      <!-- Accessible hamburger (pure CSS, no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="team.html" class="nav-link">About the Team</a></li>
+          <li><a href="project.html" class="nav-link active">About the Project</a></li>
+          <li><a href="requirements.html" class="nav-link">High Level Requirements</a></li>
+          <li><a href="solution.html" class="nav-link">Envisioned Solution</a></li>
+          <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li><a href="schedule.html" class="nav-link">Schedule/Resources</a></li>
+          <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>About the Project</h1>
+        <p>
+          How Altored Health is making healthcare pricing transparent, searchable, and human.
+        </p>
       </div>
-      <h1>About the Project</h1>
-    </header>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+  </header>
 
-    <main id="main">
-      <!-- Overview card -->
-      <section class="card">
-        <h1>Project Overview</h1>
-        <p>Altored Health aims to unify fragmented health data into a single, actionable view for proactive care. Below is the evolving outline of scope, objectives, and timeline.</p>
+  <main id="main">
 
-        <div class="project-content">
-          <h2>Scope</h2>
-          <p>Integrate key data sources (appointments, labs, wearables) into a cohesive view; deliver clear, human-readable insights; ensure privacy and security from day one.</p>
-
-          <h3>Objectives</h3>
-          <div class="project-placeholder">
-            <h4>V1 Objectives</h4>
-            <p>• Unified data model & ingestion pipeline<br/>• Insight cards with status/severity<br/>• Basic account & audit logging</p>
-
-            <h4>Stretch Goals</h4>
-            <p>• Provider-facing dashboard<br/>• Smart notifications for early signals<br/>• Export/share flows</p>
-
-            <h4>Non-Goals (for now)</h4>
-            <p>• Full EHR integration<br/>• Insurance billing</p>
-          </div>
-
-          <h2>Milestones</h2>
-          <div class="project-placeholder">
-            <h4>M1 — Discovery & Architecture</h4>
-            <p>Personas, data contracts, high-level diagrams.</p>
-
-            <h4>M2 — Data Ingestion & Model</h4>
-            <p>Parsers, validation, normalization, persistence.</p>
-
-            <h4>M3 — Insights & UX</h4>
-            <p>Insight rules, card components, accessibility passes.</p>
-
-            <h4>M4 — Polishing & Handover</h4>
-            <p>Telemetry, documentation, deployment guide.</p>
-
-            <br>
-            <h2>Tech</h2>
-            <p>Microsoft Azure</p>
-            <p>PostgreSQL</p>
-            <p>Bicep</p>
-          </div>
+    <!-- Overview -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Project Overview</h2>
+          <p>
+            Healthcare pricing is unpredictable. Patients often don't know what they'll pay until after treatment, leading to surprise bills and financial stress. There's no reliable way to compare costs across providers or understand what insurance will actually cover before making care decisions.
+          </p>
+          <p>
+            Altored Health solves this by aggregating fragmented healthcare pricing data into a searchable, transparent platform. We built a web application that parses standardized hospital pricing files, stores them in a structured database, and presents them through an intuitive search interface. Users can look up procedures, compare providers, and see real pricing information upfront.
+          </p>
+          <p>
+            This project was developed in collaboration with Jesslynn Armstrong, Director of Operations at the NAU Venture Studio, a program supporting business innovation and entrepreneurship at Northern Arizona University.
+          </p>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="footer">
-      <small>© <span id="year"></span> Altored Health — CS476 Capstone</small>
-    </footer>
-  </div>
+    <!-- What We Built -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>What We Built</h2>
+
+          <h3>Data Pipeline</h3>
+          <p>
+            A Python-based processing pipeline that ingests standardized hospital pricing files, validates and normalizes the data, and loads it into a structured PostgreSQL database. The pipeline handles the messy reality of real-world healthcare data formats.
+          </p>
+
+          <h3>Search Interface</h3>
+          <p>
+            A React frontend that lets users search for procedures, filter by provider, and view real pricing data side by side. The interface is designed to be fast and accessible — no healthcare expertise required to use it.
+          </p>
+
+          <h3>Authentication & Personalization</h3>
+          <p>
+            A user authentication system is in place, laying the groundwork for future personalization features such as saving searches, tracking procedures over time, and insurance-aware pricing views.
+          </p>
+
+          <h3>Cloud Infrastructure</h3>
+          <p>
+            The platform runs on Microsoft Azure with App Services for hosting and Blob Storage for raw data management. A Node.js backend with Prisma handles API requests and database access, keeping the full stack cohesive and maintainable.
+          </p>
+
+          <h3>Recommended Plans</h3>
+          <p>
+            Based on a user's search history and selected procedures, the platform surfaces recommended insurance plans that may offer better coverage or lower out-of-pocket costs for their specific needs.
+          </p>
+
+          <h3>Location Services</h3>
+          <p>
+            Users can enable location services to automatically surface nearby providers, making it easier to find and compare pricing for facilities within a practical distance.
+          </p>
+
+          <h3>Self-Pay vs. Insurance Comparison</h3>
+          <p>
+            A dedicated toggle lets users compare self-pay rates directly against insurance-negotiated rates, giving a clearer picture of what different payment paths actually cost before committing to care.
+          </p>
+
+          <h3>Feedback & Contact</h3>
+          <p>
+            Users can submit feedback directly through the platform and reach the team via a built-in contact form, supporting continuous improvement and open communication with early users.
+          </p>
+
+          <h3>UI Overhaul</h3>
+          <p>
+            The frontend received a comprehensive graphical redesign — improving clarity, visual hierarchy, and overall usability across the search, results, and profile experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Status -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Current Status</h2>
+          <p>
+            Our current demo includes working database parsing and search functionality. Sample healthcare data is loaded and searchable, with the authentication system operational. The platform is deployed on Azure and running end-to-end.
+          </p>
+          <ul class="problem-list">
+            <li><strong>Database parsing:</strong> Functional — real hospital pricing files processed and stored.</li>
+            <li><strong>Search:</strong> Functional — procedures searchable and comparable across providers.</li>
+            <li><strong>Authentication:</strong> In place — user accounts ready for future personalization.</li>
+            <li><strong>Infrastructure:</strong> Deployed — Azure App Services, PostgreSQL, automated pipeline.</li>
+            <li><strong>Recommended plans:</strong> Live — personalized plan suggestions based on user searches.</li>
+            <li><strong>Location services:</strong> Live — nearby provider filtering based on user location.</li>
+            <li><strong>Self-pay vs. insurance:</strong> Live — side-by-side rate comparison with toggle.</li>
+            <li><strong>Feedback & contact:</strong> Live — in-app feedback form and contact channel.</li>
+            <li><strong>UI overhaul:</strong> Complete — redesigned interface across all core views.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Potential Impact</h2>
+          <p>
+            By making healthcare costs transparent before treatment, the platform has the potential to reduce surprise billing, lower patient anxiety, and help people make informed care decisions based on actual costs rather than estimates. The initial concept for this project was provided by our sponsor in the form of a <a href="https://www.sce.nau.edu/cs/CS_Capstone/Projects/F25/24.HealthcarePricing_Armstrong.pdf" class="inline-link">Capstone project proposal <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Altored Health — CS476 Capstone</p>
+      <ul class="footer-links">
+        <li><a href="team.html">Team</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

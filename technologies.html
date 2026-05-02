@@ -87,9 +87,9 @@
             Our database toolkit and ORM that simplifies database access with type-safe queries and automatic migrations. Prisma sits between our application code and PostgreSQL, making database operations faster to write and safer to execute.
           </p>
 
-          <h3>React</h3>
+          <h3>Next.js</h3>
           <p>
-            The frontend framework powering our user interface, enabling a fast, responsive experience with component-based architecture. React's virtual DOM and ecosystem of tools let us build complex interfaces that remain performant even with large datasets.
+            The frontend framework powering our user interface, deployed on Azure Static Web Apps. Next.js builds on React with server-side rendering capabilities, client-side routing, and a structured project model that keeps the codebase maintainable as the platform grows.
           </p>
 
           <h3>Node.js</h3>
@@ -105,13 +105,52 @@
       </div>
     </section>
 
+    <!-- External AI Services -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>External AI Services</h2>
+
+          <h3>Google Generative AI</h3>
+          <p>
+            Used to intelligently match medical procedure codes across different naming conventions and formats. Healthcare data is notoriously inconsistent, and Google Generative AI helps us reconcile these variations so that search results are accurate and complete regardless of how a procedure is coded at a given facility.
+          </p>
+
+          <h3>Groq</h3>
+          <p>
+            Powers the decision trees behind our plan recommendation engine. Groq's inference speed makes it well-suited for real-time reasoning over a user's search context, surfacing relevant insurance plan recommendations quickly without adding noticeable latency to the experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Tools -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Development Tools</h2>
+
+          <h3>Visual Studio Code</h3>
+          <p>
+            The primary IDE used across the entire team. VS Code's extensive extension ecosystem, integrated terminal, and Git support made it a natural fit for a full-stack project spanning Python, Node.js, and Next.js development.
+          </p>
+
+          <h3>GitHub</h3>
+          <p>
+            Version control and collaboration managed through private GitHub repositories. The team used separate branches for cloud infrastructure and frontend development, with pull requests for merging feature work and GitHub Actions for automated deployment pipelines to Azure.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Why These Technologies -->
     <section class="section">
       <div class="container">
         <div class="problem-card">
           <h2>Why These Choices</h2>
           <p>
-            This stack balances modern development practices with healthcare industry requirements. Azure provides the compliance framework we need. PostgreSQL offers the data integrity healthcare applications demand. React delivers the user experience patients expect. Prisma and Node.js accelerate development without sacrificing quality. Python bridges the gap between raw data sources and our structured database. Together, these technologies let us move fast while building something secure and reliable.
+            This stack balances modern development practices with healthcare industry requirements. Azure provides the compliance framework we need. PostgreSQL offers the data integrity healthcare applications demand. Next.js delivers the user experience patients expect. Prisma and Node.js accelerate development without sacrificing quality. Python bridges the gap between raw data sources and our structured database. Google Generative AI and Groq extend the platform's intelligence, handling the messy reality of inconsistent medical codes and powering fast, context-aware recommendations. Together, these technologies let us move fast while building something secure, reliable, and genuinely useful.
           </p>
         </div>
       </div>
@@ -135,7 +174,6 @@
   </footer>
 
   <script>
-    // tiny enhancement: current year, no frameworks
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

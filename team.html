@@ -3,125 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About the Team · Altored Health</title>
+  <title>About the Team — Altored Health</title>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="container">
-    <header class="header">
-      <div class="top-banner">
-        <a class="brand" href="index.html" aria-label="Altored Health Home">
-          <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health Logo" />
-          <strong>Altored Health</strong>
-        </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="team.html" class="nav-link active">About the Team</a></li>
-            <li><a href="project.html" class="nav-link">About the Project</a></li>
-          </ul>
-        </nav>
+  <header class="site-header">
+    <div class="container top-banner">
+      <a class="brand" href="index.html" aria-label="Altored Health Home">
+        <img src="Large_Altored_Health_Logo.jpg" alt="Altored Health logo" />
+        <span class="brand-name">Altored Health</span>
+      </a>
+
+      <!-- Accessible hamburger (pure CSS, no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="team.html" class="nav-link active">About the Team</a></li>
+          <li><a href="project.html" class="nav-link">About the Project</a></li>
+          <li><a href="requirements.html" class="nav-link">High Level Requirements</a></li>
+          <li><a href="solution.html" class="nav-link">Envisioned Solution</a></li>
+          <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li><a href="schedule.html" class="nav-link">Schedule/Resources</a></li>
+          <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>About the Team</h1>
+        <p>
+          Meet the people building Altored Health — a cross-functional team focused on engineering, design, and delivery.
+        </p>
       </div>
-      <h1>About the Team</h1>
-    </header>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+  </header>
 
-    <main id="main">
-      <section class="card">
-        <h1>Who We Are</h1>
-        <p>We’re a cross-functional team focused on delivering a maintainable, user-centered solution with clear milestones, quality gates, and sponsor feedback loops.</p>
+  <main id="main">
 
-        <div class="team">
-          <!-- Member 1 -->
-          <article class="member">
-            <img src="assets/img/ian.png" alt="Ian Nieto headshot" width="96"  />
-            <div>
-              <h2>Ian Nieto</h2>
-              <p class="role">Team Lead</p>
-              <p>CS major (Cybersecurity minor). Proficient in C, Python, CSS, and JavaScript.</p>
-              <div class="contact">
-                <a href="mailto:imn32@nau.edu">imn32@nau.edu</a>
-                <a href="https://www.linkedin.com/in/ian-nieto-2b8579325" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- Team Members -->
+    <section class="section">
+      <div class="container">
+        <div class="problem-card">
+          <h2>Who We Are</h2>
+          <p>We're a cross-functional team focused on delivering a maintainable, user-centered solution with clear milestones, quality gates, and sponsor feedback loops.</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+            <!-- Ian Nieto -->
+            <div class="card" style="display: flex; gap: 1rem; align-items: flex-start;">
+              <img src="assets/img/ian.png" alt="Ian Nieto headshot" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(94,237,230,.3);" />
+              <div>
+                <h3 style="margin-bottom: .2rem;">Ian Nieto</h3>
+                <p style="color: var(--brand-400); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .5rem;">Team Lead</p>
+                <p style="margin-bottom: .75rem;">CS major (Cybersecurity minor). Proficient in C, Python, CSS, and JavaScript.</p>
+                <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                  <a href="mailto:imn32@nau.edu" class="inline-link"><i class="fa-solid fa-envelope"></i> imn32@nau.edu</a>
+                  <a href="https://www.linkedin.com/in/ian-nieto-2b8579325" target="_blank" rel="noopener" class="inline-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
               </div>
             </div>
-          </article>
 
-          <!-- Member 2 -->
-          <article class="member">
-            <img src="assets/img/jasmine.png" alt="Jasmine Flowers headshot" width="96" />
-            <div>
-              <h2>Jasmine Flowers</h2>
-              <p class="role">Member</p>
-              <p>Applied CS major with strengths in software architecture and cloud technologies.</p>
-              <div class="contact">
-                <a href="mailto:jjf287@nau.edu">jjf287@nau.edu</a>
-                <a href="https://www.linkedin.com/in/jasmine-flowers-267823230/" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- Jasmine Flowers -->
+            <div class="card" style="display: flex; gap: 1rem; align-items: flex-start;">
+              <img src="assets/img/jasmine.png" alt="Jasmine Flowers headshot" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(94,237,230,.3);" />
+              <div>
+                <h3 style="margin-bottom: .2rem;">Jasmine Flowers</h3>
+                <p style="color: var(--brand-400); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .5rem;">Member</p>
+                <p style="margin-bottom: .75rem;">Applied CS major with strengths in software architecture and cloud technologies.</p>
+                <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                  <a href="mailto:jjf287@nau.edu" class="inline-link"><i class="fa-solid fa-envelope"></i> jjf287@nau.edu</a>
+                  <a href="https://www.linkedin.com/in/jasmine-flowers-267823230/" target="_blank" rel="noopener" class="inline-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
               </div>
             </div>
-          </article>
 
-          <!-- Member 3 -->
-          <article class="member">
-            <img src="assets/img/john.png" alt="John Gornick headshot" width="96"/>
-            <div>
-              <h2>John Gornick</h2>
-              <p class="role">Member</p>
-              <p>CS major with database experience and a strong focus on end-user outcomes.</p>
-              <div class="contact">
-                <a href="mailto:jbg264@nau.edu">jbg264@nau.edu</a>
-                <a href="https://www.linkedin.com/in/john-gornick-47865b352/" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- John Gornick -->
+            <div class="card" style="display: flex; gap: 1rem; align-items: flex-start;">
+              <img src="assets/img/john.png" alt="John Gornick headshot" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(94,237,230,.3);" />
+              <div>
+                <h3 style="margin-bottom: .2rem;">John Gornick</h3>
+                <p style="color: var(--brand-400); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .5rem;">Member</p>
+                <p style="margin-bottom: .75rem;">CS major with database experience and a strong focus on end-user outcomes.</p>
+                <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                  <a href="mailto:jbg264@nau.edu" class="inline-link"><i class="fa-solid fa-envelope"></i> jbg264@nau.edu</a>
+                  <a href="https://www.linkedin.com/in/john-gornick-47865b352/" target="_blank" rel="noopener" class="inline-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
               </div>
             </div>
-          </article>
 
-          <!-- Member 4 -->
-          <article class="member">
-            <img src="assets/img/tre.png" alt="Jerry 'Tre' Kelley headshot" width="96"  />
-            <div>
-              <h2>Jerry “Tre” Kelley</h2>
-              <p class="role">Member</p>
-              <p>Generalist engineer with experience in C, C++, C#, and Java.</p>
-              <div class="contact">
-                <a href="mailto:tre@westrt.com">tre@westrt.com</a>
-                <a href="https://www.linkedin.com/in/jerry-kelley-673174142/" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- Tre Kelley -->
+            <div class="card" style="display: flex; gap: 1rem; align-items: flex-start;">
+              <img src="assets/img/tre.png" alt="Jerry 'Tre' Kelley headshot" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(94,237,230,.3);" />
+              <div>
+                <h3 style="margin-bottom: .2rem;">Jerry "Tre" Kelley</h3>
+                <p style="color: var(--brand-400); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .5rem;">Member</p>
+                <p style="margin-bottom: .75rem;">Generalist engineer with experience in C, C++, C#, and Java.</p>
+                <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                  <a href="mailto:tre@westrt.com" class="inline-link"><i class="fa-solid fa-envelope"></i> tre@westrt.com</a>
+                  <a href="https://www.linkedin.com/in/jerry-kelley-673174142/" target="_blank" rel="noopener" class="inline-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
               </div>
             </div>
-          </article>
 
-          <!-- Mentor -->
-          <article class="member">
-            <img src="assets/img/placeholder.gif" alt="Bailey Hall headshot" width="96" height="96" />
-            <div>
-              <h2>Bailey Hall</h2>
-              <p class="role">Mentor</p>
-              <p>Provides guidance on scope, delivery quality, and stakeholder communication.</p>
-              <div class="contact">
-                <a href="mailto:bjh437@nau.edu">bjh437@nau.edu</a>
+            <!-- Bailey Hall -->
+            <div class="card">
+              <h3 style="margin-bottom: .2rem;">Bailey Hall</h3>
+              <p style="color: var(--brand-400); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .5rem;">Mentor</p>
+              <p style="margin-bottom: .75rem;">Provides guidance on scope, delivery quality, and stakeholder communication.</p>
+              <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                <a href="mailto:bjh437@nau.edu" class="inline-link"><i class="fa-solid fa-envelope"></i> bjh437@nau.edu</a>
               </div>
             </div>
-          </article>
 
-          <!-- Client -->
-          <article class="member">
-            <img src="assets/img/placeholder.gif" alt="Jesslynn Armstrong headshot" width="96" height="96" />
-            <div>
-              <h2>Jesslynn Armstrong</h2>
-              <p class="role">Client</p>
-              <p>Project sponsor and primary stakeholder.</p>
-              <div class="contact">
-                <a href="mailto:jesslynn.armstrong@nau.edu">jesslynn.armstrong@nau.edu</a>
+            <!-- Jesslynn Armstrong -->
+            <div class="card">
+              <h3 style="margin-bottom: .2rem;">Jesslynn Armstrong</h3>
+              <p style="color: var(--brand-400); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .5rem;">Client / Sponsor</p>
+              <p style="margin-bottom: .75rem;">Director of Operations at the NAU Venture Studio and primary project stakeholder.</p>
+              <div style="display: flex; gap: .75rem; flex-wrap: wrap;">
+                <a href="mailto:jesslynn.armstrong@nau.edu" class="inline-link"><i class="fa-solid fa-envelope"></i> jesslynn.armstrong@nau.edu</a>
+                <a href="https://in.nau.edu/library-cline/venture-studio/" target="_blank" rel="noopener" class="inline-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> NAU Venture Studio</a>
               </div>
             </div>
-          </article>
+
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="footer">
-      <small>© <span id="year"></span> Altored Health — CS476 Capstone</small>
-    </footer>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Altored Health — CS476 Capstone</p>
+      <ul class="footer-links">
+        <li><a href="team.html">Team</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="requirements.html">Requirements</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
